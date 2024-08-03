@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" id="html-lang">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button id="lang-btn" class="lang-btn" data-lang-ar="EN" data-lang-en="AR" data-lang="en">AR</button>
+    </header>
+    <main>
+        <div id="item-form-container">
+            <form id="item-form">
+                <input type="text" id="item-name" placeholder="Item Name" required data-lang-en="Item Name" data-lang-ar="اسم العنصر">
+                <input type="number" id="item-cost" placeholder="Cost" step="0.01" required data-lang-en="Cost" data-lang-ar="التكلفة">
+                <input type="number" id="item-amount" placeholder="Amount" required data-lang-en="Amount" data-lang-ar="الكمية">
+                <button type="submit" data-lang-en="Add / Edit Item" data-lang-ar="إضافة / تعديل عنصر">Add / Edit Item</button>
+            </form>
+        </div>
+        <div id="controls">
+            <button id="start-purchase" data-lang-en="Start Purchase" data-lang-ar="بدء الشراء">Start Purchase</button>
+            <button id="cancel-purchase" class="hidden" data-lang-en="Cancel Purchase" data-lang-ar="إلغاء الشراء">Cancel Purchase</button>
+            <button id="finish-purchase" class="hidden" data-lang-en="Finish Purchase" data-lang-ar="إتمام الشراء">Finish Purchase</button>
+        </div>
+        <div id="money-counter">0.00</div>
+        <ul id="item-list"></ul>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

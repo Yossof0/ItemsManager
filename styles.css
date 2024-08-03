@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #B0E0E6); /* Sky gradient */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Default text alignment */
+}
+
+/* RTL Support */
+body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+header {
+    padding: 10px;
+    background: #ffffffcc; /* Semi-transparent white */
+    display: flex;
+    justify-content: flex-end;
+    position: relative; /* Ensure the lang button can be positioned correctly */
+}
+
+.lang-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.lang-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Form Styles */
+#item-form-container {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px;
+    margin: auto;
+}
+
+#item-form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#item-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#item-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Controls Styles */
+#controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#start-purchase {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#cancel-purchase {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+#finish-purchase {
+    background-color: #ffd700; /* Gold */
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Item List Styles */
+#item-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.item {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s, transform 0.3s;
+    position: relative; /* Added for button positioning */
+    cursor: pointer; /* Added for click functionality */
+}
+
+.item:hover {
+    background: #f0f8ff;
+    transform: scale(1.02);
+}
+
+.item span {
+    flex: 1;
+}
+
+.item .btn-container {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 10px; /* Adjust for RTL */
+}
+
+.item .remove-btn {
+    background-color: red;
+    color: white;
+}
+
+.item .update-btn {
+    background-color: purple;
+    color: white;
+}
+
+/* Button Styles */
+.update-btn, .remove-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Money Counter Styles */
+#money-counter {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+    .item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .header, .footer {
+        padding: 10px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .header, .footer {
+        padding: 5px;
+    }
+
+    .item {
+        font-size: 14px;
+    }
+}
